@@ -1,7 +1,14 @@
-import React, { useRef, useState } from 'react'
+import React, { Suspense, useRef, useState } from 'react';
 
 //@emailjs/browser for enabling email communication
-import emailjs from '@emailjs/browser'
+import emailjs from '@emailjs/browser';
+import { Canvas } from '@react-three/fiber';
+import Fox from '../models/Fox';
+import  Loader  from '../components/Loader';
+import useAlert from '../hooks/useAlert';
+import Alert from '../components/Alert';
+
+
 
 const Contact = () => {
   const formRef = useRef(null);
@@ -11,6 +18,16 @@ const Contact = () => {
 
   // To set the loading button dynamic measn if we click the button then it should be written as sending and if not then there should be writtin as Send Message
   const[isLoading, setIsLoading] = useState(false);
+
+
+
+
+  // Fox animation
+
+  const [currentAnimation, setCurrentAnimation]=useState('idle')
+
+
+  const {alert,showAlert,hideAlert} = useAlert();
   
 
 /*HandleChange is responsible for updating the form state object based on user input. It takes an event (e) as its parameter, typically from an input field, and uses the name attribute of the input field as the key to update the corresponding value in the form object. The setForm function is then used to update the form state with the new values.*/ 
@@ -19,13 +36,10 @@ const Contact = () => {
   };
 
 
-  const handleFocus = (e)=> {
+  const handleSubmit = (e)=> {
     e.preventDefault();    // Do not relod the page after submitting
     setIsLoading(true);
-
-
-
-
+    setCurrentAnimation('hit');  //Whenever we will submit the form then the fox will run 
 
 
     // IMPORTANT FOR SENDING MESSAGE TO OUR EMAIL 
@@ -44,30 +58,41 @@ const Contact = () => {
         message: form.message
       },
       import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
-    ).then(()=>{
+    ).then(() => {
       setIsLoading(false);
-  
-      // todo: showsuccess message
-      // todo: hide alert message
-          //setForm({name:'', email:'', message:''});
 
-      
-    }).catch((error)=>{
+      // To show alert that rhe msg is sent successfully
+      showAlert({show:true, text:'Message sent successfully!', type:'success'});
+
+      setTimeout(()=>{
+        hideAlert();
+        setCurrentAnimation('idle');
+        setForm({name:'', email:'', message:''});
+      },[3000]) //Fox will stop after 3seconds after sending msg
+    }
+    ).catch((error)=>{
       setIsLoading(false);
+      setCurrentAnimation('idle');
       console.log(error);
       //todo: show error message
+      showAlert({ show: true, text: 'I didn/t receive your message', type:'danger'});
     }
 
     )
   }
   
-  const handleBlur = ()=> {};
-  const handleSubmit = ()=>{};
+  const handleFocus = ()=>setCurrentAnimation('walk');  //When we click on any of the input then the fox will walk 
+  const handleBlur = ()=> setCurrentAnimation('idle');  // When we exit from any of the input then the fox will stop
+  
 
   return (
     <section className='relative flex lg:flex-row flex-col max-container'>
+      {alert.show && <Alert {...alert}/>}
+      
+
+
         <div className='flex-1 min-w-[50%] flex flex-col'>
-          <h1 className='head-text'> Get in touch</h1>
+          <h1 className='head-text'> Reach out </h1>
           <form
           // To receive the email 
           onSubmit={handleSubmit}
@@ -133,6 +158,33 @@ const Contact = () => {
               </button>
 
           </form>
+        </div>
+
+        <div className='lg:w-1/2 w-full lg:h-auto md:h-[500px] h-[350px]'>
+            <Canvas 
+            camera={{
+              position:[0, 0, 5],
+              fov:75,   // Field of View
+              near:0.1,
+              far: 1000
+
+            }}>
+
+
+            <directionalLight intensity={2.5} position={[0,0,1]}/>
+            <ambientLight intensity={0.5} />
+
+            <Suspense fallback={<Loader/>}>
+              <Fox
+              currentAnimation={currentAnimation}
+              position={[1,0.35,0]}
+              rotation={[12.6,-0.6,0]}
+              scale={[0.5,0.5,0.5]}
+              
+              />
+            </Suspense>
+
+            </Canvas>
         </div>
     </section>
   )
