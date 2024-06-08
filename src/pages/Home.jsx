@@ -6,6 +6,7 @@ import Island from '../models/Island';
 import Sky  from '../models/Sky';
 import Bird from '../models/Bird';
 import Plane from '../models/Plane';
+import HomeInfo from '../components/HomeInfo';
 
 const Home = () => {
     
@@ -55,8 +56,9 @@ const Home = () => {
 
   return (
     <section className='w-full h-screen relative'>
+      {/* Whenever the currentStage will be 1,2,3,4 then there will be pop up that will be coming from HomeInfo */}
       <div className='absolute top-28 left-0 right-0 z-10 flex items-center justify-center'>
-        POP Up
+        {currentStage  && <HomeInfo currentStage = {currentStage}/>}
       </div>
 
 

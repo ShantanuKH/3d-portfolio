@@ -16,7 +16,7 @@ const Bird = () => {
   // This will make the bird or say the object move around in the frame 
   useFrame(({ clock, camera }) => {
     // Update the Y position and change the flight in sin wave
-    birdRef.current.position.y = Math.sin(clock.elapsedTime) * 0.2 + 4;
+    birdRef.current.position.y = Math.sin(clock.elapsedTime) * 0.2 + 2;
 
     // This will change the x direction so that the bird will move across the island
     // This tells that if the bird exits the camera then it will rotate 180 degrees
