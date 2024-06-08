@@ -10,6 +10,8 @@ import Plane from '../models/Plane';
 const Home = () => {
     
   const [isRotating, setIsRotating] = useState(false);
+  const [currentStage, setCurrentStage] = useState(1);
+
 
   const adjustIslandForScreenSize = () => {
     let screenScale = null;
@@ -53,9 +55,9 @@ const Home = () => {
 
   return (
     <section className='w-full h-screen relative'>
-      {/* <div className='absolute top-28 left-0 right-0 z-10 flex items-center justify-center'>
+      <div className='absolute top-28 left-0 right-0 z-10 flex items-center justify-center'>
         POP Up
-      </div> */}
+      </div>
 
 
 
@@ -69,13 +71,14 @@ const Home = () => {
 
         
         <Bird/>
-         <Sky/>
+         <Sky isRotating={isRotating}/>
           <Island
             position = {islandPosition}
             scale = {islandScale}
             rotation = {islandRotation}
             isRotating = {isRotating}
             setIsRotating = {setIsRotating}
+            setCurrentStage = {setCurrentStage}
           
           />
           <Plane
