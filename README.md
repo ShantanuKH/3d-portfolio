@@ -4,7 +4,7 @@ This project is a portfolio website built with React and Three.js. The site incl
 
 ## 3D Model Integration
 
-- **Source**: A 3D model of a fox, sourced from platforms like Sketchfab or created in Blender.
+- **Source**: A 3D model of a fox, sourced from platforms like Sketchfab .
 - **Format**: The model is in glTF or GLB format for optimized transmission and rendering.
 - **Conversion**: If needed, the glTF/GLB file is converted to JSX format using tools like [gltf.pmnd.rs](https://gltf.pmnd.rs/).
 
