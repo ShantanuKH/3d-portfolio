@@ -51,7 +51,7 @@ const About = () => {
         <h3 className='subhead-text'>My Education</h3>
         <div className='mt-5 flex flex-col gap-3 text-slate-500'>
           <p>
-          I've held roles as a school leader, NSS core team member, and college vice-president, achieving top marks while honing skills in leadership, communication, and problem-solving, ready to excel in any team
+          I've held roles as a school leader, college Vice-president, and NSS core team member, achieving good marks while sharpening skills in leadership, communication, and problem-solving, ready to excel in any team.
           </p>
         </div>
 

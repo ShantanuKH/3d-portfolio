@@ -1,9 +1,7 @@
 import {Edu,edu2 } from "../assets/images";
 import {
-    car,
     contact,
     css,
-    estate,
     git,
     github,
     html,
@@ -11,14 +9,14 @@ import {
     linkedin,
     mongodb,
     motion,
-    pricewise,
     react,
-    snapgram,
-    summiz,
     tailwindcss,
-    threads,
     java,
-    boot
+    boot,
+    wordpress,
+    roboticArm,
+    amazon,
+    youtube
 } from "../assets/icons";
 
 export const skills = [
@@ -91,7 +89,7 @@ export const experiences = [
         date: "2021 - 2025",
         points: [
             "I'm pursuing my bachelors degree in Electronics & Computer Engineering at PESMCOE Pune",
-            "As an NSS core team member and Vice-president in my college, I've honed my leadership abilities, problem-solving skills, and understanding of managing challenges, ensuring effective coordination and successful outcomes.",
+            "As a Vice President in my college and a core team member of NSS, I've developed my leadership skills, problem-solving abilities, and talent for managing challenges. This experience has taught me how to coordinate effectively and achieve successful outcomes..",
         ]
     },
     {
@@ -119,65 +117,53 @@ export const experiences = [
     
 ];
 
-export const socialLinks = [
-    {
-        name: 'Contact',
-        iconUrl: contact,
-        link: '/contact',
-    },
-    {
-        name: 'GitHub',
-        iconUrl: github,
-        link: 'https://github.com/ShantanuKH',
-    },
-    {
-        name: 'LinkedIn',
-        iconUrl: linkedin,
-        link: 'https://www.linkedin.com/in/shantanu-khadse-a62585230/',
-    }
-];
+// export const socialLinks = [
+//     {
+//         name: 'Contact',
+//         iconUrl: contact,
+//         link: '/contact',
+//     },
+//     {
+//         name: 'GitHub',
+//         iconUrl: github,
+//         link: 'https://github.com/ShantanuKH',
+//     },
+//     {
+//         name: 'LinkedIn',
+//         iconUrl: linkedin,
+//         link: 'https://www.linkedin.com/in/shantanu-khadse-a62585230/',
+//     }
+// ];
 
 export const projects = [
     {
-        iconUrl: pricewise,
-        theme: 'btn-back-red',
-        name: 'Amazon Price Tracker',
-        description: 'Developed a web application that tracks and notifies users of price changes for products on Amazon, helping users find the best deals.',
-        link: 'https://github.com/adrianhajdin/pricewise',
-    },
-    {
-        iconUrl: threads,
+        iconUrl: amazon,
         theme: 'btn-back-green',
-        name: 'Full Stack Threads Clone',
-        description: 'Created a full-stack replica of the popular discussion platform "Threads," enabling users to post and engage in threaded conversations.',
-        link: 'https://github.com/adrianhajdin/threads',
+        name: 'Amazon-like E-commerce Project',
+        description: "This project is a comprehensive e-commerce website featuring key functionalities such as browsing and searching for products, managing a shopping cart with real-time price updates, and completing purchases through a streamlined checkout process. Users can also access size charts for clothing items, ensuring they select the right fit. Testing is conducted using the Jasmine framework, and delivery date estimates are provided in real-time with the integration of the Day.js library. The website boasts a responsive design for optimal viewing across devices, an interactive user interface, and additional features like order history and tracking",
+        link: 'https://github.com/ShantanuKH/Amazon-Project',
     },
     {
-        iconUrl: car,
-        theme: 'btn-back-blue',
-        name: 'Car Finding App',
-        description: 'Designed and built a mobile app for finding and comparing cars on the market, streamlining the car-buying process.',
-        link: 'https://github.com/adrianhajdin/project_next13_car_showcase',
+        iconUrl:youtube,
+        theme: 'btn-back-red',
+        name: 'Youtube-Clone',
+        description: "This project is a dynamic homepage designed to mimic YouTube's interface, constructed using HTML and CSS. It includes features such as video playback, redirection to channel pages, and engaging hover effects to improve user interaction. With its functionality and visual appeal, it offers a user experience similar to that of the actual YouTube platform.",
+        link: 'https://github.com/ShantanuKH/Youtube-Clone',
     },
     {
-        iconUrl: snapgram,
+        iconUrl: roboticArm,
         theme: 'btn-back-pink',
-        name: 'Full Stack Instagram Clone',
-        description: 'Built a complete clone of Instagram, allowing users to share photos and connect with friends in a familiar social media environment.',
-        link: 'https://github.com/adrianhajdin/social_media_app',
+        name: 'Robotic arm for Object Detection and Sorting',
+        description: 
+        'This project showcases a prototype of an automated robotic arm that utilizes Arduino technology and servo motors to perform basic object detection and manipulation tasks. The arm can detect objects using color-based techniques and compare their sizes if multiple objects share the same color. It prioritizes larger objects and employs a sorting algorithm to arrange them accordingly. Overall, the system enables the arm to autonomously detect and interact with objects, demonstrating potential applications in various industries.',
+        link: 'https://github.com/ShantanuKH/Robotic-Arm-for-Object-Detection-and-Sorting',
     },
     {
-        iconUrl: estate,
-        theme: 'btn-back-black',
-        name: 'Real-Estate Application',
-        description: 'Developed a web application for real estate listings, facilitating property searches and connecting buyers with sellers.',
-        link: 'https://github.com/adrianhajdin/projects_realestate',
+        iconUrl: wordpress,
+        theme: 'btn-back-blue',
+        name: 'Wordpress Project',
+        description: "My WordPress portfolio is a showcase of my work and skills, built using WordPress and enhanced with specialized plugins. The website is designed to highlight my projects and capabilities effectively. Key plugins used include Elementor, a drag-and-drop page builder for easy customization, Essential Addons for Elementor for additional design elements and widgets, and WPForms Lite for creating user-friendly contact forms. With these plugins, I've created a visually appealing and functional portfolio that allows visitors to explore my work and easily get in touch.",
+        link: 'https://github.com/ShantanuKH/Portfolio',
     },
-    {
-        iconUrl: summiz,
-        theme: 'btn-back-yellow',
-        name: 'AI Summarizer Application',
-        description: 'App that leverages AI to automatically generate concise & informative summaries from lengthy text content, or blogs.',
-        link: 'https://github.com/adrianhajdin/project_ai_summarizer',
-    }
+
 ];

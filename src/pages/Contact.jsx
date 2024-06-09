@@ -68,7 +68,7 @@ const Contact = () => {
         hideAlert();
         setCurrentAnimation('idle');
         setForm({name:'', email:'', message:''});
-      },[3000]) //Fox will stop after 3seconds after sending msg
+      },[2000]) //Fox will stop after 2 seconds after sending msg
     }
     ).catch((error)=>{
       setIsLoading(false);
