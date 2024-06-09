@@ -26,7 +26,7 @@ This project is a portfolio website built with React and Three.js. The site incl
 - **Mouse Control**: Users can navigate the 3D scene, which allows intuitive exploration of the scene.
 - **Keyboard Control**: Users can interact with the 3D model using keyboard controls to move.
 - **Animation**: Animations are used for the fox, with different animations triggered by user actions.
-- **Sound**9: We can play/stop the sound on Home Page by clicking on sound icon.
+- **Sound**: We can play/stop the sound on Home Page by clicking on sound icon.
 
 ## Conclusion
 
