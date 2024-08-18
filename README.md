@@ -1,6 +1,6 @@
 # 3D-Portfolio
 
-This project is a portfolio website built with React and Three.js. The site includes sections for Home, About, Projects, and Contact.
+This project is a portfolio website built with React and Three.js. The site includes sections for Home, About, Projects, and Contact. You can contact me!
 
 ## 3D Model Integration
 
