@@ -1,4 +1,4 @@
-# 3D-Portfolio
+# My 3D-Portfolio
 
 This project is a portfolio website built with React and Three.js. The site includes sections for Home, About, Projects, and Contact. You can contact me!
 
