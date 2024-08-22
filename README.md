@@ -1,7 +1,6 @@
 # My 3D-Portfolio
 
-This project is a portfolio website built with React and Three.js. The site includes sections for Home, About, Projects, and Contact. You can contact me!
-
+This project is a portfolio website built with React and Three.js.
 ## 3D Model Integration
 
 - **Source**: A 3D model of a fox, sourced from platforms like Sketchfab .
